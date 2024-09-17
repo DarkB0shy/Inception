@@ -5,7 +5,7 @@ if ! wp core is-installed --allow-root; then
 	wp core install --url="dcarassi.42.fr" --title="dcarassi's wp" --admin_user=$WP_ADMIN --admin_password=$WP_ADMIN_PSWD --admin_email=$WP_ADMIN_EMAIL --path=/var/www/html/wordpress/ --allow-root
 fi
 if ! wp user get Pippo --allow-root; then
-	wp user create Pippo Pippo@gmail.com --role=author --user-pass="qwerty" --allow-root
+	wp user create Pippo carassitidavide@gmail.com --role=author --user-pass="qwerty" --allow-root
 fi
 chown -R www-data:www-data /var/www/html/wordpress
 exec php-fpm7.3 --nodaemonize
