@@ -1,4 +1,7 @@
 all:
+	apt update -y && apt upgrade -y
+	apt install -y git docker docker.io docker-compose
+	service docker restart
 	mkdir -p /home/dcarassi/data/volume_mariadb
 	mkdir -p /home/dcarassi/data/volume_wordpress
 	sh -c -e "echo '127.0.0.1 dcarassi.42.fr' >> /etc/hosts";
