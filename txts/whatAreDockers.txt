@@ -1,13 +1,15 @@
+                                      WHAT IS DOCKER-CONTAINER
+
 What "docker" does is it separates application from infrastructure. A container packages up code and dependencies so that
-applications can run quickly even on different environments (OSs). It is a standardized software that contains both the code
-and the dependencies needed to run the application.
+applications can run quickly even on different environments (OSs) through docker. It is a standardized software that contains
+both the code and the dependencies needed to run the application.
 
 A docker weighs less than a VBox: virtual machines virtualize an entire machine, down to the hardware layers; dockers
 only virtualize the software layers on top of the already initialized hardware one.
 
 Docker compose is nothing but a way to develop multi containers applications faster, it is managed through a YAML file.
 
-Setup a Linux machine to work use dockers:
+Setup a Linux machine to use dockers:
 
   $sudo apt install -y git docker docker.io docker-compose
   $sudo service docker restart
@@ -31,4 +33,4 @@ There are 3 types of Docker volumes:
     You can reference that volume just by name without having to know the absolute path (within docker)
     To create a named docker volume run: $docker volume create new_named_volume
 
-It is also possible to create volumes within the docker-compose.yml file. It must be defined under the volumes keyword.
+It is also possible to create volumes within the docker-compose.yml file. They must be defined under the "volumes" keyword.
